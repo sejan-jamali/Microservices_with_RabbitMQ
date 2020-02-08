@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BA88D08F-0859-4DD2-BA90-11DBD4C11557}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.RabbitMQ.Domain", "Microservice.RabbitMQ.Domain\Microservice.RabbitMQ.Domain.csproj", "{0D7440E8-2963-4DBB-9E4C-07C5D65728DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.RabbitMQ.Domain.Core", "Microservice.RabbitMQ.Domain\Microservice.RabbitMQ.Domain.Core.csproj", "{0D7440E8-2963-4DBB-9E4C-07C5D65728DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Infra.Bus", "Microservices.RabbitMQ.Infra.Bus\Microservices.RabbitMQ.Infra.Bus.csproj", "{62114100-73EF-4058-82CC-3F9DEAABF023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Infra.Bus", "Microservices.RabbitMQ.Infra.Bus\Microservices.RabbitMQ.Infra.Bus.csproj", "{62114100-73EF-4058-82CC-3F9DEAABF023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Rabbit.Infra.InversionOfControl", "Microservice.Rabbit.Infra.InversionOfControl\Microservice.Rabbit.Infra.InversionOfControl.csproj", "{932766C0-85DF-40F3-B4EC-6D31D41F86D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Rabbit.Infra.InversionOfControl", "Microservice.Rabbit.Infra.InversionOfControl\Microservice.Rabbit.Infra.InversionOfControl.csproj", "{932766C0-85DF-40F3-B4EC-6D31D41F86D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banking", "Banking", "{EB016807-E965-4FEB-9928-70BE2E766502}"
 EndProject
@@ -29,13 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{AD174036-FB8E-4A77-A896-5F1154ACDE36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Api", "Microservices.RabbitMQ.Banking.Api\Microservices.RabbitMQ.Banking.Api.csproj", "{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Banking.Application", "Microservices.RabbitMQ.Banking.Application\Microservices.RabbitMQ.Banking.Application.csproj", "{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Application", "Microservices.RabbitMQ.Banking.Application\Microservices.RabbitMQ.Banking.Application.csproj", "{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Banking.Data", "Microservices.RabbitMQ.Banking.Data\Microservices.RabbitMQ.Banking.Data.csproj", "{4538F1BF-54DA-4CF8-A77A-C3075F5DCA36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Data", "Microservices.RabbitMQ.Banking.Data\Microservices.RabbitMQ.Banking.Data.csproj", "{4538F1BF-54DA-4CF8-A77A-C3075F5DCA36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Banking.Domain", "Microservices.RabbitMQ.Banking.Domain\Microservices.RabbitMQ.Banking.Domain.csproj", "{4250A7BD-CCC9-4FFF-9525-342835162B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Domain", "Microservices.RabbitMQ.Banking.Domain\Microservices.RabbitMQ.Banking.Domain.csproj", "{4250A7BD-CCC9-4FFF-9525-342835162B1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Api", "Microservices.RabbitMQ.Banking.Api\Microservices.RabbitMQ.Banking.Api.csproj", "{1B7F7938-807B-45C6-89BE-53F85DCACCBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,6 @@ Global
 		{932766C0-85DF-40F3-B4EC-6D31D41F86D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{932766C0-85DF-40F3-B4EC-6D31D41F86D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{932766C0-85DF-40F3-B4EC-6D31D41F86D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +67,10 @@ Global
 		{4250A7BD-CCC9-4FFF-9525-342835162B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4250A7BD-CCC9-4FFF-9525-342835162B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4250A7BD-CCC9-4FFF-9525-342835162B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7F7938-807B-45C6-89BE-53F85DCACCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7F7938-807B-45C6-89BE-53F85DCACCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7F7938-807B-45C6-89BE-53F85DCACCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7F7938-807B-45C6-89BE-53F85DCACCBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,10 +84,10 @@ Global
 		{03F9276F-603B-47E2-B3BD-53E560FCB102} = {EB016807-E965-4FEB-9928-70BE2E766502}
 		{A51A431F-DC5C-4908-B09F-B3E04A6298CA} = {EB016807-E965-4FEB-9928-70BE2E766502}
 		{AD174036-FB8E-4A77-A896-5F1154ACDE36} = {EB016807-E965-4FEB-9928-70BE2E766502}
-		{1F561A0F-32E2-49CB-A9CA-9C6FDAA9EDC9} = {A8D958A6-178A-4E82-B90B-0BE098A62732}
 		{A66B9A5D-2810-4AC3-BD4B-1B5A9D7A8264} = {A51A431F-DC5C-4908-B09F-B3E04A6298CA}
 		{4538F1BF-54DA-4CF8-A77A-C3075F5DCA36} = {AD174036-FB8E-4A77-A896-5F1154ACDE36}
 		{4250A7BD-CCC9-4FFF-9525-342835162B1A} = {03F9276F-603B-47E2-B3BD-53E560FCB102}
+		{1B7F7938-807B-45C6-89BE-53F85DCACCBD} = {A8D958A6-178A-4E82-B90B-0BE098A62732}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ABB78EA9-C3CB-4B59-BCA8-D28CC489FADB}
