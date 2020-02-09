@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Bank
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Banking.Domain", "Microservices.RabbitMQ.Banking.Domain\Microservices.RabbitMQ.Banking.Domain.csproj", "{4250A7BD-CCC9-4FFF-9525-342835162B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.RabbitMQ.Banking.Api", "Microservices.RabbitMQ.Banking.Api\Microservices.RabbitMQ.Banking.Api.csproj", "{1B7F7938-807B-45C6-89BE-53F85DCACCBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.RabbitMQ.Banking.Api", "Microservices.RabbitMQ.Banking.Api\Microservices.RabbitMQ.Banking.Api.csproj", "{1B7F7938-807B-45C6-89BE-53F85DCACCBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

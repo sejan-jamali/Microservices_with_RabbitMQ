@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microservice.Rabbit.Infra.InversionOfControl;
 using Microservices.RabbitMQ.Banking.Data.Context;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Microservices.RabbitMQ.Banking.Api
 {
@@ -34,6 +36,11 @@ namespace Microservices.RabbitMQ.Banking.Api
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("BankingDBConnection"));
             });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Banking Microservice", Version = "v1" });
+            });
+            services.AddMediatR(typeof(Startup));
         }
 
         private void RegisterServices(IServiceCollection services)
@@ -54,6 +61,12 @@ namespace Microservices.RabbitMQ.Banking.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking Microservice V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
