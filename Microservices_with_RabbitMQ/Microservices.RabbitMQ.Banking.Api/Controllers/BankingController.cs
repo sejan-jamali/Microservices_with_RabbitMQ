@@ -6,6 +6,9 @@ using Microservices.RabbitMQ.Banking.Application.Interfaces;
 using Microservices.RabbitMQ.Banking.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microservices.RabbitMQ.Banking.Application.Models;
+
+
 
 namespace Microservices.RabbitMQ.Banking.Api.Controllers
 {
@@ -25,6 +28,12 @@ namespace Microservices.RabbitMQ.Banking.Api.Controllers
         public ActionResult<IEnumerable<Account>> Get()
         {
             return Ok(_accountService.GetAccounts());
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] AccountTransfer accountTransfer)
+        {
+            return Ok(accountTransfer);
         }
     }
 }
