@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Microservices.RabbitMQ.Banking.Api
@@ -38,7 +39,7 @@ namespace Microservices.RabbitMQ.Banking.Api
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Banking Microservice", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Banking Microservice", Version = "v1" });
             });
             services.AddMediatR(typeof(Startup));
         }
