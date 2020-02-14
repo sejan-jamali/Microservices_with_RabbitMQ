@@ -9,7 +9,7 @@ namespace Microservices.RabbitMQ.Transfer.Domain.Models
         public int Id { get; set; }
         public string FromAccount { get; set; }
         public decimal ToAccount { get; set; }
-        public decimal TransferAmount { get; set; }
+        public decimal TransferAmounts { get; set; }
 
     }
 }
