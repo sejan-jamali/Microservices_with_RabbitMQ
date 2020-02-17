@@ -4,9 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Microservice.Rabbit.Infra.InversionOfControl;
+using Microservice.RabbitMQ.Domain.Bus;
+using Microservices.RabbitMQ.Banking.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microservices.RabbitMQ.Transfer.Data.Context;
+using Microservices.RabbitMQ.Transfer.Domain.EventHandlers;
+using Microservices.RabbitMQ.Transfer.Domain.Events;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microservices.RabbitMQ.Transfer.Domain.Events;
 
 namespace Microservices.RabbitMQ.Transfer.Api
 {
@@ -70,6 +75,14 @@ namespace Microservices.RabbitMQ.Transfer.Api
             {
                 endpoints.MapControllers();
             });
+
+            ConfigureEventBus(app);
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<Domain.Events.TransferCreatedEvent, TransferEventHandler>();
         }
     }
 }

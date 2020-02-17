@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Models\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microservice.RabbitMQ.Domain\Microservice.RabbitMQ.Domain.Core.csproj" />
+    <ProjectReference Include="..\Microservices.RabbitMQ.Transfer.Domain\Microservices.RabbitMQ.Transfer.Domain.csproj" />
   </ItemGroup>
 
 </Project>
