@@ -34,11 +34,11 @@ namespace Microservices.RabbitMQ.Transfer.Api
             RegisterServices(services);
             services.AddDbContext<TransferDBcontext>(opt =>
             {
-                opt.UseSqlServer(Configuration.GetConnectionString("BankingDBConnection"));
+                opt.UseSqlServer(Configuration.GetConnectionString("TransferDBConnection"));
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Banking Microservice", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Transfer Microservice", Version = "v1" });
             });
             services.AddMediatR(typeof(Startup));
         }
@@ -63,7 +63,7 @@ namespace Microservices.RabbitMQ.Transfer.Api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking Microservice V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transfer Microservice V1");
             });
 
             app.UseEndpoints(endpoints =>

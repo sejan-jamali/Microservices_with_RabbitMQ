@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Microservices.RabbitMQ.Transfer.Data.Context
 {
-    public class TransferDBcontext
+    public class TransferDBcontext : DbContext
     {
         public TransferDBcontext(DbContextOptions options) : base(options)
         {
