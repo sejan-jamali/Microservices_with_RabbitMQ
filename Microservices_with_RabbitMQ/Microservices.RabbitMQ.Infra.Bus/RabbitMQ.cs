@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -20,6 +21,7 @@ namespace Microservices.RabbitMQ.Infra.Bus
         private readonly IMediator _mediator;
         private readonly Dictionary<string, List<Type>> _handlers;
         private readonly List<Type> _evenTypes;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
 
         public RabbitMQ(IMediator mediator)
         {
